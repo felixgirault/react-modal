@@ -81,6 +81,7 @@ check-working-tree:
 compile:
 	@echo "[Compiling source]"
 	$(BABEL) src --out-dir lib
+	$(BABEL) src --no-babelrc --presets react,stage-2 --out-dir es
 
 build: compile
 	@echo "[Building dists]"
